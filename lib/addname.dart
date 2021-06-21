@@ -9,6 +9,7 @@ final TextEditingController _nameDx = TextEditingController();
 
 void popUpField(BuildContext context) {
   MediaQueryData _info = MediaQuery.of(context);
+
   showModalBottomSheet(
       backgroundColor: Colors.transparent,
       context: context,
@@ -16,19 +17,21 @@ void popUpField(BuildContext context) {
       builder: (context) {
         return SingleChildScrollView(
           child: Container(
-            height: _info.size.height * 0.5,
-            width: _info.size.width,
             padding: EdgeInsets.only(
-              bottom: _info.viewInsets.bottom,
+              bottom: MediaQuery.of(context).viewInsets.bottom,
             ),
             child: Container(
-              color: Colors.transparent,
-              padding: EdgeInsets.only(
-                bottom: _info.size.height * 0.04,
-                left: _info.size.width * 0.028,
-                right: _info.size.width * 0.028,
+              height: _info.size.height * 0.5,
+              width: _info.size.width,
+              child: Container(
+                color: Colors.transparent,
+                padding: EdgeInsets.only(
+                  bottom: _info.size.height * 0.04,
+                  left: _info.size.width * 0.028,
+                  right: _info.size.width * 0.028,
+                ),
+                child: AddName(),
               ),
-              child: AddName(),
             ),
           ),
         );
@@ -77,6 +80,7 @@ class AddName extends StatelessWidget {
                 margin: EdgeInsets.symmetric(
                     horizontal: constraint.maxWidth * 0.05),
                 child: TextFormField(
+                  //autofocus: true,
                   style: TextStyle(
                     color: Colors.black, //Theme.of(context).primaryColor,
                     fontWeight: FontWeight.bold,
