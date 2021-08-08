@@ -2,7 +2,7 @@
 This is a Bookmark Application Using Flutter that helps to keep the track of our reading habits
 
 
-![Homepage](https://www.mediafire.com/view/ln739autyees0v2/homepage_light.png/file#)
+![Homepage](https://www.mediafire.com/view/ln739autyees0v2/homepage_light.png/file)
 
 ![Homepage2](https://www.mediafire.com/view/41wcwx5wd30h51u/homepage_dark.png/file#)
 
